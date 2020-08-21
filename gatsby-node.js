@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// Trabalhar com a api do Gatsby
+// Serve para poder trabalhar com a api do Gatsby
 
