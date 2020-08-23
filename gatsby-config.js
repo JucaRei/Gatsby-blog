@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Meu blog`,
+    position: `Junior Fullstack Developer`,
     description: `Um blog para aprender a usar gatsby em conjunto com outras tecnologias.`,
     author: `@Reinaldo`,
   },
