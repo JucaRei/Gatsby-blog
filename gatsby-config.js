@@ -6,6 +6,7 @@ module.exports = {
     author: `@Reinaldo`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -14,7 +15,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // Sempre que precisar ler outro tipos de arquivos, só fazer a chamada modificando os campos necessários 
+    // Sempre que precisar ler outro tipos de arquivos, só fazer a chamada modificando os campos necessários
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

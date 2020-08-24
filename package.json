@@ -11,17 +11,21 @@
     "gatsby-plugin-offline": "^3.2.23",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-sharp": "^2.5.13",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.1"
   },
   "Plugins-Funcionalidades": {
     "gatsby-plugin-sharp": "Pega a blioteca sharp para lidar com imagens",
     "gatsby-transformer-sharp": "Plugin para de fato funcionar o sharp com a estrutura do gatsby",
-    "gatsby-source-filesystem": "Plugin para trabalhar com os arquivos dentro do Gatsby"
+    "gatsby-source-filesystem": "Plugin para trabalhar com os arquivos dentro do Gatsby",
+    "styled-components": "CSS in JS",
+    "gatsby-plugin-styled-components": "Plugin que permite a conexão do styled-components para o gatsby"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -30,7 +34,7 @@
     "gatsby"
   ],
   "license": "0BSD",
-   "scripts": {
+  "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "develop:playground": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
