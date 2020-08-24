@@ -18,6 +18,11 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
+  "Plugins-Funcionalidades": {
+    "gatsby-plugin-sharp": "Pega a blioteca sharp para lidar com imagens",
+    "gatsby-transformer-sharp": "Plugin para de fato funcionar o sharp com a estrutura do gatsby",
+    "gatsby-source-filesystem": "Plugin para trabalhar com os arquivos dentro do Gatsby"
+  },
   "devDependencies": {
     "prettier": "2.0.5"
   },
@@ -25,7 +30,7 @@
     "gatsby"
   ],
   "license": "0BSD",
-  "scripts": {
+   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "develop:playground": "GATSBY_GRAPHQL_IDE=playground gatsby develop",

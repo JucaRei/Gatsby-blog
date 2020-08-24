@@ -2,6 +2,8 @@ import React from "react"
 //import { StaticQuery, graphql } from "gatsby" // buscar dados usando o staticQuery via graphql
 import { useStaticQuery, graphql } from "gatsby" // usando react hooks
 
+import Avatar from "../Avatar"
+
 const Profile = () => {
   const {
     site: {
@@ -22,6 +24,7 @@ const Profile = () => {
   // renderizar esse dados
   return (
     <div className="Profile-wrapper">
+      <Avatar />
       <h1>{title}</h1>
       <h2>{position}</h2>
       <p>{description}</p>
@@ -42,6 +45,7 @@ const Profile = () => {
 //         }
 //       }
 //     `}
+
 // um dos jeitos de fazer a requisição
 // render={data=> (
 //   <div className="Profile-wrapper">

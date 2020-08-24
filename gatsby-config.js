@@ -14,6 +14,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Sempre que precisar ler outro tipos de arquivos, só fazer a chamada modificando os campos necessários 
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pdfs`,
+    //     path: `${__dirname}/src/pdfs`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
