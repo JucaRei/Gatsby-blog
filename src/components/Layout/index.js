@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import Profile from "../Profile"
 
 import styled from "styled-components"
+// tirar o padding global dos navegadores
+import GlobalStyles from "../../styles/global"
 
 //componente responsavel por segurar todo o layout
 const LayoutWrapper = styled.section`
@@ -19,6 +21,7 @@ const LayoutMain = styled.main`
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
+      <GlobalStyles />
       <aside>
         <Profile />
       </aside>
