@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
+import * as S from "./styled"
 // fixed ou fluid
 //fixed(width: 60, height: 60) {
 // fluid tem que determinar o tamanho do container
@@ -21,7 +21,7 @@ const Avatar = () => {
     `
   )
 
-  return <Img fixed={avatarImage.childImageSharp.fixed} className="Avatar" />
+  return <S.AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />
 }
 
 export default Avatar
