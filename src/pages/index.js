@@ -8,17 +8,15 @@ import PostItem from "../components/PostItem"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
-    <PostItem />
+    <PostItem
+      slug="/about"
+      background="#5f38fc"
+      category="Misc"
+      date="20 de Agosto de 2020"
+      timeToRead="5"
+      title="Nostrud eu nisi dolore in id labore."
+      description="Commodo in mollit laboris eu laboris Lorem in sit excepteur ea voluptate."
+    />
   </Layout>
 )
 
