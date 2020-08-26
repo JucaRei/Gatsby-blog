@@ -3,10 +3,10 @@ date: 2015-01-03 10:00:50
 title: Two things are infinite
 description: Commodo aliquip eu voluptate fugiat laborum culpa aliqua et magna sint.
 category: Misc
-background: "#7AAB13#
+background: "red"
 ---
 
-# Lorem ipsum
+# Lorem ipsum ODMm
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:
 

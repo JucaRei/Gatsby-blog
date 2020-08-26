@@ -1,8 +1,54 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 // Serve para poder trabalhar com a api do Gatsby
+const path = require("path")
+//to add the slug fild to each post
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  // Ensures we are processing only markdown files
+  if (node.internal.type === "MarkdownRemark") {
+    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: "pages",
+    })
+
+    // Creates new query'able field with name of 'slug' (url) without date
+    createNodeField({
+      node,
+      name: "slug",
+      value: `/${slug.slice(12)}`,
+    })
+  }
+}
+
+//criar o post
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve(`./src/templates/blog-post.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.fields.slug,
+        },
+      })
+    })
+  })
+}

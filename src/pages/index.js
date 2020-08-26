@@ -1,23 +1,61 @@
 import React from "react"
 //import { Link } from 'gatsby'  // componente do gatsby para lidar com links
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <PostItem
-      slug="/about"
-      background="#5f38fc"
-      category="Misc"
-      date="20 de Agosto de 2020"
-      timeToRead="5"
-      title="Nostrud eu nisi dolore in id labore."
-      description="Commodo in mollit laboris eu laboris Lorem in sit excepteur ea voluptate."
-    />
-  </Layout>
-)
+const IndexPage = () => {
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query PostList {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `)
+
+  // edges (graphql) é a lista
+  const postList = allMarkdownRemark.edges
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      {postList.map(
+        ({
+          node: {
+            frontmatter: { background, category, date, description, title },
+            timeToRead,
+            fields: { slug },
+          },
+        }) => (
+          <PostItem
+            slug={slug}
+            background={background}
+            category={category}
+            date={date}
+            timeToRead={timeToRead}
+            title={title}
+            description={description}
+          />
+        )
+      )}
+    </Layout>
+  )
+}
 
 export default IndexPage

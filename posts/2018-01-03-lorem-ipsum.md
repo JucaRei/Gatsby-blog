@@ -3,7 +3,7 @@ date: 2018-01-03 10:00:50
 title: Dolore nulla amet fugiat commodo velit Lorem amet ex est sint nostrud aute.
 description: Aliqua commodo cupidatat in irure nulla non eiusmod.
 category: JS
-background: "#7AAB13#
+background: "#7AAB13"
 ---
 
 # Lorem ipsum
@@ -20,7 +20,6 @@ puts a
 Pellentesque `sed` sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
 
 > Proin ornare ligula eu tellus tempus elementum. Aenean bibendum iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna.
-> Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, erat sit amet venenatis luctus, augue libero ultrices quam, ut congue nisi risus eu purus. Cras semper consectetur elementum.
 
 ### Cras semper consectetur elementum
 
