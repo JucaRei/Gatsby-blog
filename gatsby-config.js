@@ -16,13 +16,20 @@ module.exports = {
       },
     },
     // Sempre que precisar ler outro tipos de arquivos, só fazer a chamada modificando os campos necessários
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `pdfs`,
-    //     path: `${__dirname}/src/pdfs`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    // gatsby remark
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
