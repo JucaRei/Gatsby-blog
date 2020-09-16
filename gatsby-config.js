@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Blog Gatsby`,
     position: `Training Developer`,
-    description: `Um blog para aprender a usar gatsby em conjunto com outras tecnologias.`,
+    description: `Um blog básico para aprender gatsby e graphql.`,
     author: `@Reinaldo`,
   },
   plugins: [
