@@ -2,3 +2,4 @@
 // Externo ao react
 
 import "lazysizes"
+require("prismjs/themes/prism-tomorrow.css")

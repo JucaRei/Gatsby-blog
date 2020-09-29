@@ -50,6 +50,8 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          // prism sempre o ultimo plugin
+          `gatsby-remark-prismjs`,
         ],
       },
     },
