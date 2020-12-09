@@ -43,7 +43,7 @@ const queries = [
   {
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges), // optional
-    indexName: `Posts`, // overrides main index name, optional
+    indexName: `posts`, // overrides main index name, optional
     settings,
   },
 ]

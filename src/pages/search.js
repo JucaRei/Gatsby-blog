@@ -7,7 +7,6 @@ import Search from "../components/Search"
 const SearchPage = () => (
   <Layout>
     <SEO title="Search" />
-    {/* fragment */}
     <Search />
   </Layout>
 )
