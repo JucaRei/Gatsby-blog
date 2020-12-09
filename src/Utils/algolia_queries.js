@@ -9,6 +9,7 @@ const postQuery = `{
         frontmatter {
           title
           category
+          background
           date_timestamp: date
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
           description
@@ -43,7 +44,7 @@ const queries = [
   {
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges), // optional
-    indexName: `posts`, // overrides main index name, optional
+    indexName: `Posts`, // overrides main index name, optional
     settings,
   },
 ]
