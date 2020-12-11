@@ -8,16 +8,22 @@ import { SearchAlt as Search } from "@styled-icons/boxicons-regular/SearchAlt"
 import { ArrowCircleUp as Arrow } from "@styled-icons/material/ArrowCircleUp"
 import { LightBulb as Light } from "@styled-icons/heroicons-solid/LightBulb"
 import { GridFourUp as Grid } from "@styled-icons/open-iconic/GridFourUp"
+import { ThList as List } from "@styled-icons/typicons/ThList"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   // toda vez que mudar, ele muda a variavel do tema
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, []) // so faz 1 vez
 
   return (
@@ -44,8 +50,13 @@ const MenuBar = () => {
         >
           <Light />
         </S.MenuBarItem>
-        <S.MenuBarItem title="Mudar visualização">
-          <Grid />
+        <S.MenuBarItem
+          title="Mudar visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isDarkMode ? "light" : "dark")
+          }}
+        >
+          {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
         <S.MenuBarItem title="Ir para o Topo">
           <Arrow />
