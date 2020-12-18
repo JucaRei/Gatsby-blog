@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="light">
+      <body {...props.bodyAttributes} className="dark">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -41,7 +41,7 @@ export default function HTML(props) {
 
               setTheme(preferredTheme || 'dark');
 
-              // grid
+              // GRID
 
               window.__onDisplayChange = function() {};
 

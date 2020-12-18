@@ -7914,7 +7914,7 @@ gatsby-plugin-styled-components@^3.3.10:
   dependencies:
     "@babel/runtime" "^7.10.3"
 
-gatsby-plugin-transition-link@^1.20.5:
+gatsby-plugin-transition-link@^1.12.4:
   version "1.20.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-transition-link/-/gatsby-plugin-transition-link-1.20.5.tgz#c4e8ca7b69dee029436b67964f8915f2a46090ee"
   integrity sha512-0Hm//+hgVv3fDpKtZiTVfNqaVBrYwbVeE22auCwqBgaoluGkRZbr9IrOrJyhM5OZU5hIjuZmxvHNuLu4UfagQg==
