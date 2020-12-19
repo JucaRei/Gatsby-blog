@@ -1,4 +1,5 @@
 const getThemeColor = () => {
+  // typeof para o gatsby não quebra no build
   const theme = typeof window !== "undefined" && window.__theme
 
   if (theme === "light") return "#fff"
