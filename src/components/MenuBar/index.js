@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 
 import * as S from "./styled"
 
+import getThemeColor from "../../utils/getThemeColor"
+
 // Icones
 import { Home3 as Home } from "@styled-icons/icomoon/Home3"
 import { SearchAlt as Search } from "@styled-icons/boxicons-regular/SearchAlt"
@@ -33,7 +35,7 @@ const MenuBar = () => {
           to="/"
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           title="Voltar para Home"
         >
@@ -45,7 +47,7 @@ const MenuBar = () => {
           to="/search/"
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           title="Pesquisar"
         >
