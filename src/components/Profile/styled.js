@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 // import { Link } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const ProfileWrapper = styled.section`
   color: var(--texts);
@@ -9,7 +9,7 @@ export const ProfileWrapper = styled.section`
   flex-direction: column;
 `
 
-export const ProfileLink = styled(Anilink)`
+export const ProfileLink = styled(AniLink)`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
@@ -41,12 +41,12 @@ export const ProfilePosition = styled.small`
 
   ${media.lessThan("large")`
     font-size: 0.8rem;
-    margin: 0.2rem;
+    margin-top: 0.2rem;
   `}
 `
 
 export const ProfileDescription = styled.p`
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.4;
 

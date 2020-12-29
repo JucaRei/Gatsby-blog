@@ -3,6 +3,7 @@ const path = require("path")
 //to add the slug fild to each post
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+// To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   // Ensures we are processing only markdown files
@@ -80,8 +81,8 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     // Paginação
-    const postsPerpage = 6
-    const numPages = Math.ceil(posts.length / postsPerpage)
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
 
     // Array com um número de páginas
     Array.from({ length: numPages }).forEach((_, index) => {
@@ -89,8 +90,8 @@ exports.createPages = ({ graphql, actions }) => {
         path: index === 0 ? `/` : `/page/${index + 1}`,
         component: path.resolve(`./src/templates/blog-list.js`),
         context: {
-          limit: postsPerpage,
-          skip: index * postsPerpage,
+          limit: postsPerPage,
+          skip: index * postsPerPage,
           numPages,
           currentPage: index + 1,
         },

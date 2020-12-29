@@ -70,6 +70,7 @@ export default function HTML(props) {
           }}
         />
         {props.preBodyComponents}
+
         <div
           key={`body`}
           id="___gatsby"

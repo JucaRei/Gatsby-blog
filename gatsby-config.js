@@ -11,10 +11,10 @@ module.exports = {
     siteUrl: `https://gatsbyblogtest10.netlify.app/`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     // precisa ser a primeira para funcionar com gatsby-remark-images
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
